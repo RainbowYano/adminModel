@@ -1,7 +1,7 @@
 <template>
     <el-scrollbar wrap-class="scrollbar-wrapper" class="navaside">
     <el-menu
-      default-active="2"
+      :default-active="$route.path"
       class="el-menu-vertical-demo"
       background-color="#545c64"
       text-color="#fff"
@@ -10,7 +10,7 @@
       :collapse-transition="true"
       :collapse="isCollapse"
     >
-      <el-menu-item index="/">
+      <el-menu-item index="/home">
          <svg-icon icon-class="tree" />
         <span slot="title">首页</span>
       </el-menu-item>
@@ -43,8 +43,7 @@ export default {
   methods: {},
 
   created() {
-    // console.log(123)
-    console.log(this.isCollapse)
+    //
   }
 };
 </script>
